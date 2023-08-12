@@ -1,7 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -15,13 +16,57 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.audiowide{
+  font-family: 'Audiowide', cursive;
+}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  background-image: url("../public/mainBack.svg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: blueviolet;
+  overflow: hidden;
+  font-family: "Orbitron", sans-serif;
+}
+
+.main_div {
+  margin: 0;
+  padding: 0;
+  width: 87vw;
+  height: 90vh;
+  border-radius: 20px;
+  background-image: url("../public/back.svg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* text backgound linear gradient*/
+.text_gradient {
+  background: linear-gradient(92.37deg, #9b77e9 -1.13%, #c12e8b 101.09%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Asset Card */
+.card {
+  background: rgba(192, 189, 189, 0.259);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
+  /* border: 1px solid white; */
+  clip-path: polygon(0% 0%, 81% 0, 100% 16.5%, 100% 99%, 0% 100%);
+
+}
+
+.img_card{
+  clip-path: polygon(0 0, 78% 0, 100% 33%, 100% 100%, 20% 100%, 0 70%);
 }
